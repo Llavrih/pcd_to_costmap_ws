@@ -4,9 +4,6 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /PointCloud21
-        - /PointCloud22
-        - /TF1
         - /TF1/Frames1
         - /TF1/Tree1
       Splitter Ratio: 0.5323529243469238
@@ -28,7 +25,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: PointCloud2
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -83,7 +80,7 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz/PointCloud2
       Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color Transformer: RGB8
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -95,7 +92,7 @@ Visualization Manager:
       Selectable: true
       Size (Pixels): 3
       Size (m): 0.009999999776482582
-      Style: Flat Squares
+      Style: Points
       Topic: /cam_1/depth/color/points
       Unreliable: false
       Use Fixed Frame: true
@@ -111,7 +108,7 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz/PointCloud2
       Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color Transformer: RGB8
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -123,7 +120,7 @@ Visualization Manager:
       Selectable: true
       Size (Pixels): 3
       Size (m): 0.009999999776482582
-      Style: Flat Squares
+      Style: Points
       Topic: /cam_2/depth/color/points
       Unreliable: false
       Use Fixed Frame: true
@@ -144,11 +141,27 @@ Visualization Manager:
           Value: true
         base_scan:
           Value: false
+        cam_1_aligned_depth_to_color_frame:
+          Value: false
+        cam_1_color_frame:
+          Value: false
         cam_1_color_optical_frame:
+          Value: false
+        cam_1_depth_frame:
+          Value: false
+        cam_1_depth_optical_frame:
           Value: false
         cam_1_link:
           Value: true
+        cam_2_aligned_depth_to_color_frame:
+          Value: false
+        cam_2_color_frame:
+          Value: false
         cam_2_color_optical_frame:
+          Value: false
+        cam_2_depth_frame:
+          Value: false
+        cam_2_depth_optical_frame:
           Value: false
         cam_2_link:
           Value: true
@@ -167,15 +180,26 @@ Visualization Manager:
           odom:
             base_footprint:
               base_link:
-                base_link_1:
-                  cam_1_color_optical_frame:
-                    cam_1_link:
-                      {}
-                  cam_2_color_optical_frame:
-                    cam_2_link:
-                      {}
                 base_scan:
-                  {}
+                  base_link_1:
+                    cam_1_color_optical_frame:
+                      cam_1_link:
+                        cam_1_aligned_depth_to_color_frame:
+                          {}
+                        cam_1_color_frame:
+                          {}
+                        cam_1_depth_frame:
+                          cam_1_depth_optical_frame:
+                            {}
+                    cam_2_color_optical_frame:
+                      cam_2_link:
+                        cam_2_aligned_depth_to_color_frame:
+                          {}
+                        cam_2_color_frame:
+                          {}
+                        cam_2_depth_frame:
+                          cam_2_depth_optical_frame:
+                            {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -206,7 +230,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 3.1927597522735596
+      Distance: 5.012784957885742
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -214,17 +238,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -3.531179904937744
-        Y: 0.17659199237823486
-        Z: 9.5367431640625e-07
+        X: 0.8179769515991211
+        Y: -0.7852085828781128
+        Z: 1.807696662581293e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6353970170021057
+      Pitch: 0.274796724319458
       Target Frame: <Fixed Frame>
-      Yaw: 3.3617348670959473
+      Yaw: 3.821779251098633
     Saved: ~
 Window Geometry:
   Displays:
