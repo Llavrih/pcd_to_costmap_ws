@@ -34,9 +34,19 @@
     
    
     <!-- Set RTAB-Map's parameters -->
+    <param name="RGBD/ProximityBySpace" type="string" value="true"/>
+    <param name="Reg/Force3DoF" type="string" value="true"/>
+    <param name="RGBD/OptimizeFromGraphEnd" type="string" value="true"/>
     <param name="Rtabmap/DetectionRate" type="string" value="1"/>
+    <param name="Icp/CorrespondenceRatio" type="string" value="0.1"/>
     <param name="Kp/DetectorStrategy" type="string" value="0"/>
     <param name="Vis/FeatureType" type="string" value="6"/>
-    <!-- ... more parameters ... -->
+    <param name="Reg/Strategy" type="string" value="0"/>
+    <param name="Grid/RangeMax" type="string" value="4.0"/>
+    <param name="Grid/NoiseFilteringMinNeighbors" type="string" value="50"/>
+    <param name="Grid/NoiseFilteringMinRadius" type="string" value="0.05"/>
+    <param name="Grid/DepthDecimation" type="string" value="4"/>
+    <param name="Grid/FlatObstacleDetection" type="string" value="true"/>
+    <param name="Grid/RayTracing" type="string" value="true"/>
   </include>
 </launch>
